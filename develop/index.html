@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Flask-Classful &#8212; Flask Classful 0.15.0-dev0 documentation</title>
     <link rel="stylesheet" href="_static/flasky.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -202,8 +200,8 @@ your latest achievement.</p>
 decorator, so you should feel right at home adding custom routes to any
 views you create.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">If you want to use other decorators with your views, you’ll need to
+<p class="admonition-title">Note</p>
+<p>If you want to use other decorators with your views, you’ll need to
 make sure that the <code class="docutils literal notranslate"><span class="pre">&#64;route</span></code> decorators are first.</p>
 </div>
 <p>So far, all of our URLs have been prefixed by that <cite>/quotes</cite> bit and you
@@ -220,15 +218,16 @@ we might as well make sure we’re talking about the same things when we talk
 about what you can do.</p>
 <p>What you see below is a route comprised of a route prefix, and a route base:</p>
 <blockquote>
-<div>/neat_prefix/great_base/</div></blockquote>
+<div><p>/neat_prefix/great_base/</p>
+</div></blockquote>
 <p>The prefix <cite>/neat_prefix/</cite> is only included if you explicitly specify
 a prefix for the FlaskView, otherwise no prefix will be applied.</p>
 <p>The route base <cite>/great_base/</cite> will always exist, either because it was
 inferred automatically from the name of the FlaskView class, or because you
 specified a route base to use.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal notranslate"><span class="pre">Flask-Classful</span></code> favors putting trailing slashes at the end of routes without parameters.
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">Flask-Classful</span></code> favors putting trailing slashes at the end of routes without parameters.
 You can override this behavior by specifying <cite>trailing_slash=False</cite> either
 as an attribute of your <cite>FlaskView</cite> or in the <cite>register</cite> method.</p>
 </div>
@@ -372,37 +371,37 @@ determined let’s see how to do that anyway.</p>
 </pre></div>
 </div>
 <p>That would end up generating the following 2 routes:</p>
-<table border="1" class="docutils">
+<table class="docutils align-center">
 <colgroup>
-<col width="27%" />
-<col width="73%" />
+<col style="width: 27%" />
+<col style="width: 73%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><strong>rule</strong></td>
-<td>/quote/&lt;id&gt;</td>
+<tbody>
+<tr class="row-odd"><td><p><strong>rule</strong></p></td>
+<td><p>/quote/&lt;id&gt;</p></td>
 </tr>
-<tr class="row-even"><td><strong>endpoint</strong></td>
-<td>QuotesView:show_quote_1</td>
+<tr class="row-even"><td><p><strong>endpoint</strong></p></td>
+<td><p>QuotesView:show_quote_1</p></td>
 </tr>
-<tr class="row-odd"><td><strong>method</strong></td>
-<td>GET</td>
+<tr class="row-odd"><td><p><strong>method</strong></p></td>
+<td><p>GET</p></td>
 </tr>
 </tbody>
 </table>
-<table border="1" class="docutils">
+<table class="docutils align-center">
 <colgroup>
-<col width="27%" />
-<col width="73%" />
+<col style="width: 27%" />
+<col style="width: 73%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><strong>rule</strong></td>
-<td>/quote/show/&lt;id&gt;</td>
+<tbody>
+<tr class="row-odd"><td><p><strong>rule</strong></p></td>
+<td><p>/quote/show/&lt;id&gt;</p></td>
 </tr>
-<tr class="row-even"><td><strong>endpoint</strong></td>
-<td>QuotesView:show_quote_0</td>
+<tr class="row-even"><td><p><strong>endpoint</strong></p></td>
+<td><p>QuotesView:show_quote_0</p></td>
 </tr>
-<tr class="row-odd"><td><strong>method</strong></td>
-<td>GET</td>
+<tr class="row-odd"><td><p><strong>method</strong></p></td>
+<td><p>GET</p></td>
 </tr>
 </tbody>
 </table>
@@ -427,37 +426,37 @@ like you.</p>
 </pre></div>
 </div>
 <p>Will generate the following routes:</p>
-<table border="1" class="docutils">
+<table class="docutils align-center">
 <colgroup>
-<col width="27%" />
-<col width="73%" />
+<col style="width: 27%" />
+<col style="width: 73%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><strong>rule</strong></td>
-<td>/quote/&lt;id&gt;</td>
+<tbody>
+<tr class="row-odd"><td><p><strong>rule</strong></p></td>
+<td><p>/quote/&lt;id&gt;</p></td>
 </tr>
-<tr class="row-even"><td><strong>endpoint</strong></td>
-<td>show_quote</td>
+<tr class="row-even"><td><p><strong>endpoint</strong></p></td>
+<td><p>show_quote</p></td>
 </tr>
-<tr class="row-odd"><td><strong>method</strong></td>
-<td>GET</td>
+<tr class="row-odd"><td><p><strong>method</strong></p></td>
+<td><p>GET</p></td>
 </tr>
 </tbody>
 </table>
-<table border="1" class="docutils">
+<table class="docutils align-center">
 <colgroup>
-<col width="27%" />
-<col width="73%" />
+<col style="width: 27%" />
+<col style="width: 73%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><strong>rule</strong></td>
-<td>/quote/show/&lt;id&gt;</td>
+<tbody>
+<tr class="row-odd"><td><p><strong>rule</strong></p></td>
+<td><p>/quote/show/&lt;id&gt;</p></td>
 </tr>
-<tr class="row-even"><td><strong>endpoint</strong></td>
-<td>QuotesView:show_quote_0</td>
+<tr class="row-even"><td><p><strong>endpoint</strong></p></td>
+<td><p>QuotesView:show_quote_0</p></td>
 </tr>
-<tr class="row-odd"><td><strong>method</strong></td>
-<td>GET</td>
+<tr class="row-odd"><td><p><strong>method</strong></p></td>
+<td><p>GET</p></td>
 </tr>
 </tbody>
 </table>
@@ -474,135 +473,129 @@ in the round hole. When you register a <cite>FlaskView</cite> with an app,
 I care. I know that sometimes you just want things to just <em>work</em> and
 not have to think about it. Let’s look at <cite>FlaskView</cite>’s very special
 method names:</p>
-<dl class="docutils">
-<dt><strong>index</strong></dt>
-<dd><p class="first">Woah… you’ve seen this one before! Remember way back at the
+<dl>
+<dt><strong>index</strong></dt><dd><p>Woah… you’ve seen this one before! Remember way back at the
 beginning? Oh nevermind. So <em>index</em> is generally used for home pages
 and lists of resources. The automatically generated route is:</p>
-<table border="1" class="last docutils">
+<table class="docutils align-center">
 <colgroup>
-<col width="27%" />
-<col width="73%" />
+<col style="width: 27%" />
+<col style="width: 73%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><strong>rule</strong></td>
-<td>/</td>
+<tbody>
+<tr class="row-odd"><td><p><strong>rule</strong></p></td>
+<td><p>/</p></td>
 </tr>
-<tr class="row-even"><td><strong>endpoint</strong></td>
-<td>&lt;class name&gt;:index</td>
+<tr class="row-even"><td><p><strong>endpoint</strong></p></td>
+<td><p>&lt;class name&gt;:index</p></td>
 </tr>
-<tr class="row-odd"><td><strong>method</strong></td>
-<td>GET</td>
+<tr class="row-odd"><td><p><strong>method</strong></p></td>
+<td><p>GET</p></td>
 </tr>
 </tbody>
 </table>
 </dd>
-<dt><strong>get</strong></dt>
-<dd><p class="first">Another old familiar friend, <cite>get</cite> is usually used to retrieve a
+<dt><strong>get</strong></dt><dd><p>Another old familiar friend, <cite>get</cite> is usually used to retrieve a
 specific resource. The automatically generated route is:</p>
-<table border="1" class="last docutils">
+<table class="docutils align-center">
 <colgroup>
-<col width="27%" />
-<col width="73%" />
+<col style="width: 27%" />
+<col style="width: 73%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><strong>rule</strong></td>
-<td>/&lt;id&gt;</td>
+<tbody>
+<tr class="row-odd"><td><p><strong>rule</strong></p></td>
+<td><p>/&lt;id&gt;</p></td>
 </tr>
-<tr class="row-even"><td><strong>endpoint</strong></td>
-<td>&lt;class name&gt;:get</td>
+<tr class="row-even"><td><p><strong>endpoint</strong></p></td>
+<td><p>&lt;class name&gt;:get</p></td>
 </tr>
-<tr class="row-odd"><td><strong>method</strong></td>
-<td>GET</td>
+<tr class="row-odd"><td><p><strong>method</strong></p></td>
+<td><p>GET</p></td>
 </tr>
 </tbody>
 </table>
 </dd>
-<dt><strong>post</strong></dt>
-<dd><p class="first">This method is generally used for creating new instances of a resource
+<dt><strong>post</strong></dt><dd><p>This method is generally used for creating new instances of a resource
 but can really be used to handle any posted data you want. The
 automatically generated route is:</p>
-<table border="1" class="last docutils">
+<table class="docutils align-center">
 <colgroup>
-<col width="27%" />
-<col width="73%" />
+<col style="width: 27%" />
+<col style="width: 73%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><strong>rule</strong></td>
-<td>/</td>
+<tbody>
+<tr class="row-odd"><td><p><strong>rule</strong></p></td>
+<td><p>/</p></td>
 </tr>
-<tr class="row-even"><td><strong>endpoint</strong></td>
-<td>&lt;class name&gt;:post</td>
+<tr class="row-even"><td><p><strong>endpoint</strong></p></td>
+<td><p>&lt;class name&gt;:post</p></td>
 </tr>
-<tr class="row-odd"><td><strong>method</strong></td>
-<td>POST</td>
+<tr class="row-odd"><td><p><strong>method</strong></p></td>
+<td><p>POST</p></td>
 </tr>
 </tbody>
 </table>
 </dd>
-<dt><strong>put</strong></dt>
-<dd><p class="first">For those of us using REST this one is really helpful. It’s generally
+<dt><strong>put</strong></dt><dd><p>For those of us using REST this one is really helpful. It’s generally
 used to update a specific resource. The automatically generated route
 is:</p>
-<table border="1" class="last docutils">
+<table class="docutils align-center">
 <colgroup>
-<col width="27%" />
-<col width="73%" />
+<col style="width: 27%" />
+<col style="width: 73%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><strong>rule</strong></td>
-<td>/&lt;id&gt;</td>
+<tbody>
+<tr class="row-odd"><td><p><strong>rule</strong></p></td>
+<td><p>/&lt;id&gt;</p></td>
 </tr>
-<tr class="row-even"><td><strong>endpoint</strong></td>
-<td>&lt;class name&gt;:put</td>
+<tr class="row-even"><td><p><strong>endpoint</strong></p></td>
+<td><p>&lt;class name&gt;:put</p></td>
 </tr>
-<tr class="row-odd"><td><strong>method</strong></td>
-<td>PUT</td>
+<tr class="row-odd"><td><p><strong>method</strong></p></td>
+<td><p>PUT</p></td>
 </tr>
 </tbody>
 </table>
 </dd>
-<dt><strong>patch</strong></dt>
-<dd><p class="first">Similar to <cite>put</cite>, <cite>patch</cite> is used for updating a resource. Unlike <cite>put</cite>
+<dt><strong>patch</strong></dt><dd><p>Similar to <cite>put</cite>, <cite>patch</cite> is used for updating a resource. Unlike <cite>put</cite>
 however you only send the parts of the resource you want changed,
 instead of doing a complete replacement of the resource. The automatically
 generated route is:</p>
-<table border="1" class="last docutils">
+<table class="docutils align-center">
 <colgroup>
-<col width="27%" />
-<col width="73%" />
+<col style="width: 27%" />
+<col style="width: 73%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><strong>rule</strong></td>
-<td>/&lt;id&gt;</td>
+<tbody>
+<tr class="row-odd"><td><p><strong>rule</strong></p></td>
+<td><p>/&lt;id&gt;</p></td>
 </tr>
-<tr class="row-even"><td><strong>endpoint</strong></td>
-<td>&lt;class name&gt;:patch</td>
+<tr class="row-even"><td><p><strong>endpoint</strong></p></td>
+<td><p>&lt;class name&gt;:patch</p></td>
 </tr>
-<tr class="row-odd"><td><strong>method</strong></td>
-<td>PATCH</td>
+<tr class="row-odd"><td><p><strong>method</strong></p></td>
+<td><p>PATCH</p></td>
 </tr>
 </tbody>
 </table>
 </dd>
-<dt><strong>delete</strong></dt>
-<dd><p class="first">More RESTfulness. It’s the most self explanatory of all the RESTful
+<dt><strong>delete</strong></dt><dd><p>More RESTfulness. It’s the most self explanatory of all the RESTful
 methods, and it’s commonly used to destroy a specific resource. The
 automatically generated route is:</p>
-<table border="1" class="last docutils">
+<table class="docutils align-center">
 <colgroup>
-<col width="27%" />
-<col width="73%" />
+<col style="width: 27%" />
+<col style="width: 73%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><strong>rule</strong></td>
-<td>/&lt;id&gt;</td>
+<tbody>
+<tr class="row-odd"><td><p><strong>rule</strong></p></td>
+<td><p>/&lt;id&gt;</p></td>
 </tr>
-<tr class="row-even"><td><strong>endpoint</strong></td>
-<td>&lt;class name&gt;:delete</td>
+<tr class="row-even"><td><p><strong>endpoint</strong></p></td>
+<td><p>&lt;class name&gt;:delete</p></td>
 </tr>
-<tr class="row-odd"><td><strong>method</strong></td>
-<td>DELETE</td>
+<tr class="row-odd"><td><p><strong>method</strong></p></td>
+<td><p>DELETE</p></td>
 </tr>
 </tbody>
 </table>
@@ -644,8 +637,8 @@ look at an example:</p>
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Notice that the custom endpoint does not get prefixed with the class
+<p class="admonition-title">Note</p>
+<p>Notice that the custom endpoint does not get prefixed with the class
 name like the auto-generated endpoints. When you define a custom
 endpoint, we hand that over to Flask in it’s original, unaltered form.</p>
 </div>
@@ -667,20 +660,20 @@ view method in your <cite>FlaskView</cite> like this:</p>
 </pre></div>
 </div>
 <p><cite>FlaskView</cite> will generate a route like this:</p>
-<table border="1" class="docutils">
+<table class="docutils align-center">
 <colgroup>
-<col width="27%" />
-<col width="73%" />
+<col style="width: 27%" />
+<col style="width: 73%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><strong>rule</strong></td>
-<td>/root/my_view/</td>
+<tbody>
+<tr class="row-odd"><td><p><strong>rule</strong></p></td>
+<td><p>/root/my_view/</p></td>
 </tr>
-<tr class="row-even"><td><strong>endpoint</strong></td>
-<td>SomeView:my_view</td>
+<tr class="row-even"><td><p><strong>endpoint</strong></p></td>
+<td><p>SomeView:my_view</p></td>
 </tr>
-<tr class="row-odd"><td><strong>method</strong></td>
-<td>GET</td>
+<tr class="row-odd"><td><p><strong>method</strong></p></td>
+<td><p>GET</p></td>
 </tr>
 </tbody>
 </table>
@@ -695,26 +688,26 @@ too. If you were to define another view like this:</p>
 </pre></div>
 </div>
 <p><cite>FlaskView</cite> would generate a route like this:</p>
-<table border="1" class="docutils">
+<table class="docutils align-center">
 <colgroup>
-<col width="27%" />
-<col width="73%" />
+<col style="width: 27%" />
+<col style="width: 73%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><strong>rule</strong></td>
-<td>/home/this_view/&lt;arg1&gt;/&lt;arg2&gt;</td>
+<tbody>
+<tr class="row-odd"><td><p><strong>rule</strong></p></td>
+<td><p>/home/this_view/&lt;arg1&gt;/&lt;arg2&gt;</p></td>
 </tr>
-<tr class="row-even"><td><strong>endpoint</strong></td>
-<td>AnotherView:this_view</td>
+<tr class="row-even"><td><p><strong>endpoint</strong></p></td>
+<td><p>AnotherView:this_view</p></td>
 </tr>
-<tr class="row-odd"><td><strong>method</strong></td>
-<td>GET</td>
+<tr class="row-odd"><td><p><strong>method</strong></p></td>
+<td><p>GET</p></td>
 </tr>
 </tbody>
 </table>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">One important thing to note is that <cite>FlaskView</cite> supports <a class="reference external" href="#type-hints-support-for-python-3">type hints in your
+<p class="admonition-title">Note</p>
+<p>One important thing to note is that <cite>FlaskView</cite> supports <a class="reference external" href="#type-hints-support-for-python-3">type hints in your
 parameters in Python 3</a>, and if you want or need them in
 Python 2, you’ll need to define the route yourself using the <cite>&#64;route</cite> decorator.</p>
 </div>
@@ -730,20 +723,20 @@ app. For example:</p>
 </pre></div>
 </div>
 <p><cite>FlaskView</cite> will generate a route like this:</p>
-<table border="1" class="docutils">
+<table class="docutils align-center">
 <colgroup>
-<col width="27%" />
-<col width="73%" />
+<col style="width: 27%" />
+<col style="width: 73%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><strong>rule</strong></td>
-<td>/root/my-view/</td>
+<tbody>
+<tr class="row-odd"><td><p><strong>rule</strong></p></td>
+<td><p>/root/my-view/</p></td>
 </tr>
-<tr class="row-even"><td><strong>endpoint</strong></td>
-<td>SomeView:my_view</td>
+<tr class="row-even"><td><p><strong>endpoint</strong></p></td>
+<td><p>SomeView:my_view</p></td>
 </tr>
-<tr class="row-odd"><td><strong>method</strong></td>
-<td>GET</td>
+<tr class="row-odd"><td><p><strong>method</strong></p></td>
+<td><p>GET</p></td>
 </tr>
 </tbody>
 </table>
@@ -762,20 +755,20 @@ and make it a list of all HTTP methods you want your custom methods to respond t
 </div>
 <p>This will register <code class="docutils literal notranslate"><span class="pre">my_view</span></code> as both a <code class="docutils literal notranslate"><span class="pre">GET</span></code> and a <code class="docutils literal notranslate"><span class="pre">POST</span></code> route. Creating the following
 route:</p>
-<table border="1" class="docutils">
+<table class="docutils align-center">
 <colgroup>
-<col width="27%" />
-<col width="73%" />
+<col style="width: 27%" />
+<col style="width: 73%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><strong>rule</strong></td>
-<td>/root/my_view/</td>
+<tbody>
+<tr class="row-odd"><td><p><strong>rule</strong></p></td>
+<td><p>/root/my_view/</p></td>
 </tr>
-<tr class="row-even"><td><strong>endpoint</strong></td>
-<td>SomeView:my_view</td>
+<tr class="row-even"><td><p><strong>endpoint</strong></p></td>
+<td><p>SomeView:my_view</p></td>
 </tr>
-<tr class="row-odd"><td><strong>method</strong></td>
-<td>GET, POST</td>
+<tr class="row-odd"><td><p><strong>method</strong></p></td>
+<td><p>GET, POST</p></td>
 </tr>
 </tbody>
 </table>
@@ -920,60 +913,48 @@ sure it gets run only before that view. (as you have guessed by now,
 <h3>The View Wrappin’ Method List<a class="headerlink" href="#the-view-wrappin-method-list" title="Permalink to this headline">¶</a></h3>
 <p>Just to be certain, let’s go ahead and review the methods you can write to
 wrap your views:</p>
-<dl class="docutils">
-<dt><strong>before_request(self, name, *args, **kwargs)</strong></dt>
-<dd><p class="first">Will be called before any view in this <code class="docutils literal notranslate"><span class="pre">FlaskView</span></code> is called.</p>
-<table class="last docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">name:</th><td class="field-body">The name of the view that’s about to be called.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">*args:</th><td class="field-body">Any arguments that will be passed to the view.</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">**kwargs:</th><td class="field-body">Any keyword arguments that will be passed to the view.</td>
-</tr>
-</tbody>
-</table>
+<dl class="simple">
+<dt><strong>before_request(self, name, *args, **kwargs)</strong></dt><dd><p>Will be called before any view in this <code class="docutils literal notranslate"><span class="pre">FlaskView</span></code> is called.</p>
+<dl class="field-list simple">
+<dt class="field-odd">name</dt>
+<dd class="field-odd"><p>The name of the view that’s about to be called.</p>
 </dd>
-<dt><strong>before_&lt;view_method&gt;(self, *args, **kwargs)</strong></dt>
-<dd><p class="first">Will be called before the view specified &lt;view_method&gt; is called.</p>
-<table class="last docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">*args:</th><td class="field-body">Any arguments that will be passed to the view.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">**kwargs:</th><td class="field-body">Any keyword arguments that will be passed to the view.</td>
-</tr>
-</tbody>
-</table>
+<dt class="field-even">*args</dt>
+<dd class="field-even"><p>Any arguments that will be passed to the view.</p>
 </dd>
-<dt><strong>after_request(self, name, response)</strong></dt>
-<dd><p class="first">Will be called after any view in this <code class="docutils literal notranslate"><span class="pre">FlaskView</span></code> is called. You must
+<dt class="field-odd">**kwargs</dt>
+<dd class="field-odd"><p>Any keyword arguments that will be passed to the view.</p>
+</dd>
+</dl>
+</dd>
+<dt><strong>before_&lt;view_method&gt;(self, *args, **kwargs)</strong></dt><dd><p>Will be called before the view specified &lt;view_method&gt; is called.</p>
+<dl class="field-list simple">
+<dt class="field-odd">*args</dt>
+<dd class="field-odd"><p>Any arguments that will be passed to the view.</p>
+</dd>
+<dt class="field-even">**kwargs</dt>
+<dd class="field-even"><p>Any keyword arguments that will be passed to the view.</p>
+</dd>
+</dl>
+</dd>
+<dt><strong>after_request(self, name, response)</strong></dt><dd><p>Will be called after any view in this <code class="docutils literal notranslate"><span class="pre">FlaskView</span></code> is called. You must
 return either the passed in response or a new response.</p>
-<table class="last docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">name:</th><td class="field-body">The name of the view that was called.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">response:</th><td class="field-body">The response produced after calling the view.</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">name</dt>
+<dd class="field-odd"><p>The name of the view that was called.</p>
 </dd>
-<dt><strong>after_&lt;view_method&gt;(self, response)</strong></dt>
-<dd><p class="first">Will be called after the &lt;view_method&gt; is called. You must return either
+<dt class="field-even">response</dt>
+<dd class="field-even"><p>The response produced after calling the view.</p>
+</dd>
+</dl>
+</dd>
+<dt><strong>after_&lt;view_method&gt;(self, response)</strong></dt><dd><p>Will be called after the &lt;view_method&gt; is called. You must return either
 the passed in response or a new response.</p>
-<table class="last docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">response:</th><td class="field-body">The response produced after calling the view.</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">response</dt>
+<dd class="field-odd"><p>The response produced after calling the view.</p>
+</dd>
+</dl>
 </dd>
 </dl>
 </div>
@@ -983,13 +964,13 @@ the passed in response or a new response.</p>
 you’re thinking. (You’re starting to sound like my ex, sheesh.) I prefer the
 term <em>reliable</em>.</p>
 <ol class="arabic simple">
-<li>Any method registered with <code class="docutils literal notranslate"><span class="pre">&#64;app.before_request</span></code></li>
-<li>FlaskView’s <code class="docutils literal notranslate"><span class="pre">before_request</span></code> method</li>
-<li>FlaskView’s <code class="docutils literal notranslate"><span class="pre">before_&lt;view_method&gt;</span></code> method</li>
-<li>The actual view method</li>
-<li>FlaskView’s <code class="docutils literal notranslate"><span class="pre">after_&lt;view_method&gt;</span></code> method</li>
-<li>FlaskView’s <code class="docutils literal notranslate"><span class="pre">after_request</span></code> method</li>
-<li>Any method registered with <code class="docutils literal notranslate"><span class="pre">&#64;app.after_request</span></code></li>
+<li><p>Any method registered with <code class="docutils literal notranslate"><span class="pre">&#64;app.before_request</span></code></p></li>
+<li><p>FlaskView’s <code class="docutils literal notranslate"><span class="pre">before_request</span></code> method</p></li>
+<li><p>FlaskView’s <code class="docutils literal notranslate"><span class="pre">before_&lt;view_method&gt;</span></code> method</p></li>
+<li><p>The actual view method</p></li>
+<li><p>FlaskView’s <code class="docutils literal notranslate"><span class="pre">after_&lt;view_method&gt;</span></code> method</p></li>
+<li><p>FlaskView’s <code class="docutils literal notranslate"><span class="pre">after_request</span></code> method</p></li>
+<li><p>Any method registered with <code class="docutils literal notranslate"><span class="pre">&#64;app.after_request</span></code></p></li>
 </ol>
 </div>
 </div>
@@ -1161,8 +1142,8 @@ representations dictionary, like so:</p>
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">“Find the best match” means comparing the accepted mimetypes and their
+<p class="admonition-title">Note</p>
+<p>“Find the best match” means comparing the accepted mimetypes and their
 q-factor weighting to the list of representation mimetypes. That is, Flask
 Classful does no special heuristics in finding this best match. For more
 information, see
@@ -1282,22 +1263,21 @@ before breaking things for the next version releases to make it always backward-
 <div class="section" id="from-v0-13-1-to-v0-14-0">
 <h3>From v0.13.1 to v0.14.0<a class="headerlink" href="#from-v0-13-1-to-v0-14-0" title="Permalink to this headline">¶</a></h3>
 <ul>
-<li><dl class="first docutils">
-<dt>The behavior of the trailing slash is changed: redirect by default when no trailing slash, see:</dt>
-<dd><ul class="first simple">
-<li><a class="reference external" href="https://github.com/teracyhq/flask-classful/issues/47">https://github.com/teracyhq/flask-classful/issues/47</a></li>
+<li><dl>
+<dt>The behavior of the trailing slash is changed: redirect by default when no trailing slash, see:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://github.com/teracyhq/flask-classful/issues/47">https://github.com/teracyhq/flask-classful/issues/47</a></p></li>
 </ul>
-<p class="last">=&gt; If you don’t want to see 301 redirect, set <cite>trailing_slash</cite> option to <cite>False</cite>.</p>
+<p>=&gt; If you don’t want to see 301 redirect, set <cite>trailing_slash</cite> option to <cite>False</cite>.</p>
 </dd>
 </dl>
 </li>
-<li><p class="first">The behavior of the representations is changed: return content by default when no matching registered
+<li><p>The behavior of the representations is changed: return content by default when no matching registered
 representation instead of returning the first output from the first registered representation. Allow
 specififying the default representation when no matching with <cite>flask-classful/default</cite> mime type,
 see:</p>
 <blockquote>
 <div><ul class="simple">
-<li><a class="reference external" href="https://github.com/teracyhq/flask-classful/issues/72">https://github.com/teracyhq/flask-classful/issues/72</a></li>
+<li><p><a class="reference external" href="https://github.com/teracyhq/flask-classful/issues/72">https://github.com/teracyhq/flask-classful/issues/72</a></p></li>
 </ul>
 <p>=&gt; You need to specify the default representation.</p>
 </div></blockquote>
@@ -1307,13 +1287,12 @@ see:</p>
 <div class="section" id="from-v0-10-0-to-v0-11-0">
 <h3>From v0.10.0 to v0.11.0<a class="headerlink" href="#from-v0-10-0-to-v0-11-0" title="Permalink to this headline">¶</a></h3>
 <ul>
-<li><dl class="first docutils">
-<dt>The order in which <cite>FlaskView</cite> decorators are applied has been reversed, see:</dt>
-<dd><ul class="first simple">
-<li><a class="reference external" href="https://github.com/teracyhq/flask-classful/commit/686be6ef6fd09d9c1719fa89763ad09baddf7fd0">https://github.com/teracyhq/flask-classful/commit/686be6ef6fd09d9c1719fa89763ad09baddf7fd0</a></li>
-<li><a class="reference external" href="https://github.com/teracyhq/flask-classful/issues/49">https://github.com/teracyhq/flask-classful/issues/49</a></li>
+<li><dl>
+<dt>The order in which <cite>FlaskView</cite> decorators are applied has been reversed, see:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://github.com/teracyhq/flask-classful/commit/686be6ef6fd09d9c1719fa89763ad09baddf7fd0">https://github.com/teracyhq/flask-classful/commit/686be6ef6fd09d9c1719fa89763ad09baddf7fd0</a></p></li>
+<li><p><a class="reference external" href="https://github.com/teracyhq/flask-classful/issues/49">https://github.com/teracyhq/flask-classful/issues/49</a></p></li>
 </ul>
-<p class="last">=&gt; You need to make sure the decorators are in the right order.</p>
+<p>=&gt; You need to make sure the decorators are in the right order.</p>
 </dd>
 </dl>
 </li>
@@ -1338,14 +1317,11 @@ automatically configure routes when registered with a Flask app instance.</p>
 <em class="property">classmethod </em><code class="descname">build_route_name</code><span class="sig-paren">(</span><em>method_name</em><span class="sig-paren">)</span><a class="headerlink" href="#flask_classful.FlaskView.build_route_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a unique route name based on the combination of the class
 name with the method name.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>method_name</strong> – the method name to use when building a route name</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>method_name</strong> – the method name to use when building a route name</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="classmethod">
@@ -1353,21 +1329,17 @@ name with the method name.</p>
 <em class="property">classmethod </em><code class="descname">build_rule</code><span class="sig-paren">(</span><em>rule</em>, <em>method=None</em><span class="sig-paren">)</span><a class="headerlink" href="#flask_classful.FlaskView.build_rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a routing rule based on either the class name (minus the
 ‘View’ suffix) or the defined <cite>route_base</cite> attribute of the class</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>rule</strong> – the path portion that should be appended to the
-route base</li>
-<li><strong>method</strong> – if a method’s arguments should be considered when
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rule</strong> – the path portion that should be appended to the
+route base</p></li>
+<li><p><strong>method</strong> – if a method’s arguments should be considered when
 constructing the rule, provide a reference to the
-method here. arguments named “self” will be ignored</li>
+method here. arguments named “self” will be ignored</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="classmethod">
@@ -1382,14 +1354,11 @@ method here. arguments named “self” will be ignored</li>
 <dd><p>Creates a proxy function that can be used by Flasks routing. The
 proxy instantiates the FlaskView subclass and calls the appropriate
 method.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> – the name of the method to create a proxy for</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> – the name of the method to create a proxy for</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="classmethod">
@@ -1406,35 +1375,31 @@ them along with a new dict without those values.</p>
 Flask app. Any methods not prefixes with an underscore are candidates
 to be routed and will have routes registered when this method is
 called.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>app</strong> – an instance of a Flask application</li>
-<li><strong>route_base</strong> – The base path to use for all routes registered for
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>app</strong> – an instance of a Flask application</p></li>
+<li><p><strong>route_base</strong> – The base path to use for all routes registered for
 this class. Overrides the route_base attribute if
-it has been set.</li>
-<li><strong>subdomain</strong> – A subdomain that this registration should use when
-configuring routes.</li>
-<li><strong>route_prefix</strong> – A prefix to be applied to all routes registered
+it has been set.</p></li>
+<li><p><strong>subdomain</strong> – A subdomain that this registration should use when
+configuring routes.</p></li>
+<li><p><strong>route_prefix</strong> – A prefix to be applied to all routes registered
 for this class. Precedes route_base. Overrides
-the class’ route_prefix if it has been set.</li>
-<li><strong>trailing_slash</strong> – An option to put trailing slashes at the end of
-routes without parameters.</li>
-<li><strong>method_dashified</strong> – An option to dashify method name from
+the class’ route_prefix if it has been set.</p></li>
+<li><p><strong>trailing_slash</strong> – An option to put trailing slashes at the end of
+routes without parameters.</p></li>
+<li><p><strong>method_dashified</strong> – An option to dashify method name from
 some_route to /some-route/ route instead of
-default /some_route/</li>
-<li><strong>base_class</strong> – Allow specifying an alternate base class for customization instead of the default FlaskView</li>
-<li><strong>init_argument</strong> – If provided, when instancing the class being registered it will pass this parameter to
-the constructor</li>
-<li><strong>rule_options</strong> – The options are passed to
-<code class="xref py py-class docutils literal notranslate"><span class="pre">Rule</span></code> object.</li>
+default /some_route/</p></li>
+<li><p><strong>base_class</strong> – Allow specifying an alternate base class for customization instead of the default FlaskView</p></li>
+<li><p><strong>init_argument</strong> – If provided, when instancing the class being registered it will pass this parameter to
+the constructor</p></li>
+<li><p><strong>rule_options</strong> – The options are passed to
+<code class="xref py py-class docutils literal notranslate"><span class="pre">Rule</span></code> object.</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -1535,8 +1500,6 @@ FlaskView subclasses. The format is exactly the same as Flask’s
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
