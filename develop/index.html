@@ -371,7 +371,7 @@ determined let’s see how to do that anyway.</p>
 </pre></div>
 </div>
 <p>That would end up generating the following 2 routes:</p>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 27%" />
 <col style="width: 73%" />
@@ -388,7 +388,7 @@ determined let’s see how to do that anyway.</p>
 </tr>
 </tbody>
 </table>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 27%" />
 <col style="width: 73%" />
@@ -426,7 +426,7 @@ like you.</p>
 </pre></div>
 </div>
 <p>Will generate the following routes:</p>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 27%" />
 <col style="width: 73%" />
@@ -443,7 +443,7 @@ like you.</p>
 </tr>
 </tbody>
 </table>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 27%" />
 <col style="width: 73%" />
@@ -477,7 +477,7 @@ method names:</p>
 <dt><strong>index</strong></dt><dd><p>Woah… you’ve seen this one before! Remember way back at the
 beginning? Oh nevermind. So <em>index</em> is generally used for home pages
 and lists of resources. The automatically generated route is:</p>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 27%" />
 <col style="width: 73%" />
@@ -497,7 +497,7 @@ and lists of resources. The automatically generated route is:</p>
 </dd>
 <dt><strong>get</strong></dt><dd><p>Another old familiar friend, <cite>get</cite> is usually used to retrieve a
 specific resource. The automatically generated route is:</p>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 27%" />
 <col style="width: 73%" />
@@ -518,7 +518,7 @@ specific resource. The automatically generated route is:</p>
 <dt><strong>post</strong></dt><dd><p>This method is generally used for creating new instances of a resource
 but can really be used to handle any posted data you want. The
 automatically generated route is:</p>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 27%" />
 <col style="width: 73%" />
@@ -539,7 +539,7 @@ automatically generated route is:</p>
 <dt><strong>put</strong></dt><dd><p>For those of us using REST this one is really helpful. It’s generally
 used to update a specific resource. The automatically generated route
 is:</p>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 27%" />
 <col style="width: 73%" />
@@ -561,7 +561,7 @@ is:</p>
 however you only send the parts of the resource you want changed,
 instead of doing a complete replacement of the resource. The automatically
 generated route is:</p>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 27%" />
 <col style="width: 73%" />
@@ -582,7 +582,7 @@ generated route is:</p>
 <dt><strong>delete</strong></dt><dd><p>More RESTfulness. It’s the most self explanatory of all the RESTful
 methods, and it’s commonly used to destroy a specific resource. The
 automatically generated route is:</p>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 27%" />
 <col style="width: 73%" />
@@ -660,7 +660,7 @@ view method in your <cite>FlaskView</cite> like this:</p>
 </pre></div>
 </div>
 <p><cite>FlaskView</cite> will generate a route like this:</p>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 27%" />
 <col style="width: 73%" />
@@ -688,7 +688,7 @@ too. If you were to define another view like this:</p>
 </pre></div>
 </div>
 <p><cite>FlaskView</cite> would generate a route like this:</p>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 27%" />
 <col style="width: 73%" />
@@ -723,7 +723,7 @@ app. For example:</p>
 </pre></div>
 </div>
 <p><cite>FlaskView</cite> will generate a route like this:</p>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 27%" />
 <col style="width: 73%" />
@@ -755,7 +755,7 @@ and make it a list of all HTTP methods you want your custom methods to respond t
 </div>
 <p>This will register <code class="docutils literal notranslate"><span class="pre">my_view</span></code> as both a <code class="docutils literal notranslate"><span class="pre">GET</span></code> and a <code class="docutils literal notranslate"><span class="pre">POST</span></code> route. Creating the following
 route:</p>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 27%" />
 <col style="width: 73%" />
@@ -1309,12 +1309,12 @@ the fun.</p>
 <h2>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="flask_classful.FlaskView">
-<em class="property">class </em><code class="descclassname">flask_classful.</code><code class="descname">FlaskView</code><a class="headerlink" href="#flask_classful.FlaskView" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">flask_classful.</code><code class="sig-name descname">FlaskView</code><a class="headerlink" href="#flask_classful.FlaskView" title="Permalink to this definition">¶</a></dt>
 <dd><p>Base view for any class based views implemented with Flask-Classful. Will
 automatically configure routes when registered with a Flask app instance.</p>
-<dl class="classmethod">
+<dl class="method">
 <dt id="flask_classful.FlaskView.build_route_name">
-<em class="property">classmethod </em><code class="descname">build_route_name</code><span class="sig-paren">(</span><em>method_name</em><span class="sig-paren">)</span><a class="headerlink" href="#flask_classful.FlaskView.build_route_name" title="Permalink to this definition">¶</a></dt>
+<em class="property">classmethod </em><code class="sig-name descname">build_route_name</code><span class="sig-paren">(</span><em class="sig-param">method_name</em><span class="sig-paren">)</span><a class="headerlink" href="#flask_classful.FlaskView.build_route_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a unique route name based on the combination of the class
 name with the method name.</p>
 <dl class="field-list simple">
@@ -1324,9 +1324,9 @@ name with the method name.</p>
 </dl>
 </dd></dl>
 
-<dl class="classmethod">
+<dl class="method">
 <dt id="flask_classful.FlaskView.build_rule">
-<em class="property">classmethod </em><code class="descname">build_rule</code><span class="sig-paren">(</span><em>rule</em>, <em>method=None</em><span class="sig-paren">)</span><a class="headerlink" href="#flask_classful.FlaskView.build_rule" title="Permalink to this definition">¶</a></dt>
+<em class="property">classmethod </em><code class="sig-name descname">build_rule</code><span class="sig-paren">(</span><em class="sig-param">rule</em>, <em class="sig-param">method=None</em><span class="sig-paren">)</span><a class="headerlink" href="#flask_classful.FlaskView.build_rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a routing rule based on either the class name (minus the
 ‘View’ suffix) or the defined <cite>route_base</cite> attribute of the class</p>
 <dl class="field-list simple">
@@ -1342,15 +1342,15 @@ method here. arguments named “self” will be ignored</p></li>
 </dl>
 </dd></dl>
 
-<dl class="classmethod">
+<dl class="method">
 <dt id="flask_classful.FlaskView.get_route_base">
-<em class="property">classmethod </em><code class="descname">get_route_base</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#flask_classful.FlaskView.get_route_base" title="Permalink to this definition">¶</a></dt>
+<em class="property">classmethod </em><code class="sig-name descname">get_route_base</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#flask_classful.FlaskView.get_route_base" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the route base to use for the current class.</p>
 </dd></dl>
 
-<dl class="classmethod">
+<dl class="method">
 <dt id="flask_classful.FlaskView.make_proxy_method">
-<em class="property">classmethod </em><code class="descname">make_proxy_method</code><span class="sig-paren">(</span><em>name</em>, <em>init_argument</em><span class="sig-paren">)</span><a class="headerlink" href="#flask_classful.FlaskView.make_proxy_method" title="Permalink to this definition">¶</a></dt>
+<em class="property">classmethod </em><code class="sig-name descname">make_proxy_method</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">init_argument</em><span class="sig-paren">)</span><a class="headerlink" href="#flask_classful.FlaskView.make_proxy_method" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a proxy function that can be used by Flasks routing. The
 proxy instantiates the FlaskView subclass and calls the appropriate
 method.</p>
@@ -1361,16 +1361,16 @@ method.</p>
 </dl>
 </dd></dl>
 
-<dl class="classmethod">
+<dl class="method">
 <dt id="flask_classful.FlaskView.parse_options">
-<em class="property">classmethod </em><code class="descname">parse_options</code><span class="sig-paren">(</span><em>options</em><span class="sig-paren">)</span><a class="headerlink" href="#flask_classful.FlaskView.parse_options" title="Permalink to this definition">¶</a></dt>
+<em class="property">classmethod </em><code class="sig-name descname">parse_options</code><span class="sig-paren">(</span><em class="sig-param">options</em><span class="sig-paren">)</span><a class="headerlink" href="#flask_classful.FlaskView.parse_options" title="Permalink to this definition">¶</a></dt>
 <dd><p>Extracts subdomain and endpoint values from the options dict and returns
 them along with a new dict without those values.</p>
 </dd></dl>
 
-<dl class="classmethod">
+<dl class="method">
 <dt id="flask_classful.FlaskView.register">
-<em class="property">classmethod </em><code class="descname">register</code><span class="sig-paren">(</span><em>app</em>, <em>route_base=None</em>, <em>subdomain=None</em>, <em>route_prefix=None</em>, <em>trailing_slash=None</em>, <em>method_dashified=None</em>, <em>base_class=None</em>, <em>init_argument=None</em>, <em>**rule_options</em><span class="sig-paren">)</span><a class="headerlink" href="#flask_classful.FlaskView.register" title="Permalink to this definition">¶</a></dt>
+<em class="property">classmethod </em><code class="sig-name descname">register</code><span class="sig-paren">(</span><em class="sig-param">app</em>, <em class="sig-param">route_base=None</em>, <em class="sig-param">subdomain=None</em>, <em class="sig-param">route_prefix=None</em>, <em class="sig-param">trailing_slash=None</em>, <em class="sig-param">method_dashified=None</em>, <em class="sig-param">base_class=None</em>, <em class="sig-param">init_argument=None</em>, <em class="sig-param">**rule_options</em><span class="sig-paren">)</span><a class="headerlink" href="#flask_classful.FlaskView.register" title="Permalink to this definition">¶</a></dt>
 <dd><p>Registers a FlaskView class for use with a specific instance of a
 Flask app. Any methods not prefixes with an underscore are candidates
 to be routed and will have routes registered when this method is
@@ -1406,7 +1406,7 @@ the constructor</p></li>
 
 <dl class="function">
 <dt id="flask_classful.route">
-<code class="descclassname">flask_classful.</code><code class="descname">route</code><span class="sig-paren">(</span><em>rule</em>, <em>**options</em><span class="sig-paren">)</span><a class="headerlink" href="#flask_classful.route" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">flask_classful.</code><code class="sig-name descname">route</code><span class="sig-paren">(</span><em class="sig-param">rule</em>, <em class="sig-param">**options</em><span class="sig-paren">)</span><a class="headerlink" href="#flask_classful.route" title="Permalink to this definition">¶</a></dt>
 <dd><p>A decorator that is used to define custom routes for methods in
 FlaskView subclasses. The format is exactly the same as Flask’s
 <cite>&#64;app.route</cite> decorator.</p>
@@ -1495,10 +1495,10 @@ FlaskView subclasses. The format is exactly the same as Flask’s
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
     </form>
     </div>
