@@ -108,8 +108,8 @@ the module import, as the APIs are the same for both:</p>
 <p>If you’re like me, you probably get a better idea of how to use something
 when you see it being used. Let’s go ahead and create a little app to
 see how <code class="docutils literal notranslate"><span class="pre">Flask-Classful</span></code> works:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="k">import</span> <span class="n">Flask</span>
-<span class="kn">from</span> <span class="nn">flask_classful</span> <span class="k">import</span> <span class="n">FlaskView</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">flask_classful</span> <span class="kn">import</span> <span class="n">FlaskView</span>
 
 <span class="c1"># we&#39;ll make a list to hold some quotes for our app</span>
 <span class="n">quotes</span> <span class="o">=</span> <span class="p">[</span>
@@ -149,7 +149,7 @@ one quote? What would we do then?</p>
 see the very poignant quote from the esteemed Mr. Edison.</p>
 <p>That’s cool and all, but what if we just wanted a random quote? What then?
 Let’s add a random view to our FlaskView:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="k">import</span> <span class="n">choice</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">QuotesView</span><span class="p">(</span><span class="n">FlaskView</span><span class="p">):</span>
@@ -179,7 +179,7 @@ fix it to be something more spectacular forthwith. In a moment of blind
 inspiration we decide that getting a random quote is on par with receiving
 a rasher of your favorite porcine delicacy. The new URL should be <cite>/quotes/word_bacon/</cite>
 so that everyone knows what a treat they are in for.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask_classful</span> <span class="k">import</span> <span class="n">FlaskView</span><span class="p">,</span> <span class="n">route</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask_classful</span> <span class="kn">import</span> <span class="n">FlaskView</span><span class="p">,</span> <span class="n">route</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">QuotesView</span><span class="p">(</span><span class="n">FlaskView</span><span class="p">):</span>
@@ -335,13 +335,13 @@ create the inherited <code class="docutils literal notranslate"><span class="pre
 <p>Note that this parameter is unique, you can pass complex structures using as this
 parameter either tuples or dictionaries.</p>
 <p>Let’s see an example of this additional parameter in the <code class="docutils literal notranslate"><span class="pre">register</span></code> method:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="k">import</span> <span class="n">Flask</span>
-<span class="kn">from</span> <span class="nn">flask_classful</span> <span class="k">import</span> <span class="n">FlaskView</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">flask_classful</span> <span class="kn">import</span> <span class="n">FlaskView</span>
 
 <span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 
 <span class="k">class</span> <span class="nc">QuotesView</span><span class="p">(</span><span class="n">FlaskView</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">my_init_argument</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">my_init_argument</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_my_init_argument</span> <span class="o">=</span> <span class="n">my_init_argument</span>
 
     <span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -855,8 +855,8 @@ night before during one of your late night hackathons and it hits you:</p>
 <p>No doubt it’s an inspired thought, but in this case it was a tragic
 oversight. You realize now how lucky it was that you chose to use
 <code class="docutils literal notranslate"><span class="pre">Flask-Classful</span></code> because adding tracking is going to be a snap:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask_classful</span> <span class="k">import</span> <span class="n">FlaskView</span>
-<span class="kn">from</span> <span class="nn">made_up_tracking</span> <span class="k">import</span> <span class="n">track_it</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask_classful</span> <span class="kn">import</span> <span class="n">FlaskView</span>
+<span class="kn">from</span> <span class="nn">made_up_tracking</span> <span class="kn">import</span> <span class="n">track_it</span>
 
 <span class="k">class</span> <span class="nc">WidgetsView</span><span class="p">(</span><span class="n">FlaskView</span><span class="p">):</span>
 
@@ -887,8 +887,8 @@ too. Let’s say for example you wanted to run something before the <code class=
 runs? Just create a method called <code class="docutils literal notranslate"><span class="pre">before_index</span></code> and <code class="docutils literal notranslate"><span class="pre">Flask-Classful</span></code> will make
 sure it gets run only before that view. (as you have guessed by now,
 <code class="docutils literal notranslate"><span class="pre">after_index</span></code> will be run only after the index view).</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask_classful</span> <span class="k">import</span> <span class="n">FlaskView</span>
-<span class="kn">from</span> <span class="nn">made_up_tracking</span> <span class="k">import</span> <span class="n">track_it</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask_classful</span> <span class="kn">import</span> <span class="n">FlaskView</span>
+<span class="kn">from</span> <span class="nn">made_up_tracking</span> <span class="kn">import</span> <span class="n">track_it</span>
 
 <span class="k">class</span> <span class="nc">WidgetsView</span><span class="p">(</span><span class="n">FlaskView</span><span class="p">):</span>
 
@@ -1000,7 +1000,7 @@ application.</p>
 want to support at the same time you’re registering your views:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># views.py</span>
 
-<span class="kn">from</span> <span class="nn">flask_classful</span> <span class="k">import</span> <span class="n">FlaskView</span>
+<span class="kn">from</span> <span class="nn">flask_classful</span> <span class="kn">import</span> <span class="n">FlaskView</span>
 
 <span class="k">class</span> <span class="nc">CoolApiView</span><span class="p">(</span><span class="n">FlaskView</span><span class="p">):</span>
 
@@ -1010,8 +1010,8 @@ want to support at the same time you’re registering your views:</p>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># main.py</span>
 
-<span class="kn">from</span> <span class="nn">flask</span> <span class="k">import</span> <span class="n">Flask</span>
-<span class="kn">from</span> <span class="nn">views</span> <span class="k">import</span> <span class="n">CoolApiView</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">views</span> <span class="kn">import</span> <span class="n">CoolApiView</span>
 
 <span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;SERVER_NAME&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;socool.biz&#39;</span>
@@ -1033,7 +1033,7 @@ want to support at the same time you’re registering your views:</p>
 the <code class="docutils literal notranslate"><span class="pre">FlaskView</span></code> subclass:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># views.py</span>
 
-<span class="kn">from</span> <span class="nn">flask_classful</span> <span class="k">import</span> <span class="n">FlaskView</span>
+<span class="kn">from</span> <span class="nn">flask_classful</span> <span class="kn">import</span> <span class="n">FlaskView</span>
 
 <span class="k">class</span> <span class="nc">CoolApiView</span><span class="p">(</span><span class="n">FlaskView</span><span class="p">):</span>
     <span class="n">subdomain</span> <span class="o">=</span> <span class="s2">&quot;api&quot;</span>
@@ -1044,8 +1044,8 @@ the <code class="docutils literal notranslate"><span class="pre">FlaskView</span
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># main.py</span>
 
-<span class="kn">from</span> <span class="nn">flask</span> <span class="k">import</span> <span class="n">Flask</span>
-<span class="kn">from</span> <span class="nn">views</span> <span class="k">import</span> <span class="n">CoolApiView</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">views</span> <span class="kn">import</span> <span class="n">CoolApiView</span>
 
 <span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;SERVER_NAME&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;socool.biz&#39;</span>
@@ -1074,7 +1074,7 @@ the data, add it to the <cite>representations</cite> variable on your <cite>Flas
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># representations.py</span>
 
 <span class="kn">import</span> <span class="nn">json</span>
-<span class="kn">from</span> <span class="nn">flask</span> <span class="k">import</span> <span class="n">make_response</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">make_response</span>
 
 <span class="k">def</span> <span class="nf">output_json</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="n">content_type</span> <span class="o">=</span> <span class="s1">&#39;application/json&#39;</span>
@@ -1090,8 +1090,8 @@ the data, add it to the <cite>representations</cite> variable on your <cite>Flas
 <p>Then go ahead and add this new resource representation to your <cite>FlaskView</cite>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># views.py</span>
 
-<span class="kn">from</span> <span class="nn">flask_classful</span> <span class="k">import</span> <span class="n">FlaskView</span>
-<span class="kn">from</span> <span class="nn">.representations</span> <span class="k">import</span> <span class="n">output_json</span>
+<span class="kn">from</span> <span class="nn">flask_classful</span> <span class="kn">import</span> <span class="n">FlaskView</span>
+<span class="kn">from</span> <span class="nn">.representations</span> <span class="kn">import</span> <span class="n">output_json</span>
 
 <span class="k">class</span> <span class="nc">CoolJSONView</span><span class="p">(</span><span class="n">FlaskView</span><span class="p">):</span>
     <span class="n">representations</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;application/json&#39;</span><span class="p">:</span> <span class="n">output_json</span><span class="p">}</span>
@@ -1114,9 +1114,9 @@ is passed straight to <code class="docutils literal notranslate"><span class="pr
 skipping the <code class="docutils literal notranslate"><span class="pre">representations</span></code> system entirely:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># views.py</span>
 
-<span class="kn">from</span> <span class="nn">flask</span> <span class="k">import</span> <span class="n">redirect</span>
-<span class="kn">from</span> <span class="nn">flask_classful</span> <span class="k">import</span> <span class="n">FlaskView</span>
-<span class="kn">from</span> <span class="nn">.representations</span> <span class="k">import</span> <span class="n">output_json</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">redirect</span>
+<span class="kn">from</span> <span class="nn">flask_classful</span> <span class="kn">import</span> <span class="n">FlaskView</span>
+<span class="kn">from</span> <span class="nn">.representations</span> <span class="kn">import</span> <span class="n">output_json</span>
 
 <span class="k">class</span> <span class="nc">CoolJSONView</span><span class="p">(</span><span class="n">FlaskView</span><span class="p">):</span>
     <span class="n">representations</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;application/json&#39;</span><span class="p">:</span> <span class="n">output_json</span><span class="p">}</span>
@@ -1130,8 +1130,8 @@ found, you can add the <code class="docutils literal notranslate"><span class="p
 representations dictionary, like so:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># views.py</span>
 
-<span class="kn">from</span> <span class="nn">flask_classful</span> <span class="k">import</span> <span class="n">FlaskView</span>
-<span class="kn">from</span> <span class="nn">.representations</span> <span class="k">import</span> <span class="n">output_default</span><span class="p">,</span> <span class="n">output_json</span>
+<span class="kn">from</span> <span class="nn">flask_classful</span> <span class="kn">import</span> <span class="n">FlaskView</span>
+<span class="kn">from</span> <span class="nn">.representations</span> <span class="kn">import</span> <span class="n">output_default</span><span class="p">,</span> <span class="n">output_json</span>
 
 <span class="k">class</span> <span class="nc">CoolDefaultView</span><span class="p">(</span><span class="n">FlaskView</span><span class="p">):</span>
     <span class="n">representations</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;application/json&#39;</span><span class="p">:</span> <span class="n">output_json</span><span class="p">,</span>
